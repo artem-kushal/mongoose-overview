@@ -13,6 +13,7 @@ const styles = {
   },
 };
 
+
 const muiTheme = getMuiTheme({
   palette: {
     accent1Color: deepOrange500,

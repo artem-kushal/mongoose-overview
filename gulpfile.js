@@ -4,26 +4,35 @@ var gulpLoadPlugins = require('gulp-load-plugins');
 var plugins = gulpLoadPlugins();
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
+var browserSync = require('browser-sync');
 
 gulp.task('serve', function() {
-    gulp.src('app')
-        .pipe(plugins.webserver({
-            port:'9090',
-            livereload: true,
-            open: true
-        }));
+    browserSync({
+        files: './app/dist/bundle.js',
+        server: {
+            baseDir: ['./app', './']
+        },
+        notify: false
+    });
 });
 
 gulp.task('build', function () {
-    return browserify({entries: 'app/main.jsx', extensions: ['.jsx'], debug: true})
-        .transform('babelify', {presets: ['es2015', 'react']})
-        .bundle()
-        .pipe(source('bundle.js'))
-        .pipe(gulp.dest('app/dist'));
+    return browserify({
+        entries: 'app/main.jsx', 
+        extensions: ['.jsx'], 
+        debug: true
+    })
+    .transform('babelify', {
+        presets: ['es2015', 'react'],
+        sourceMapsAbsolute: true
+    })
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(gulp.dest('app/dist'));
 });
 
 gulp.task('watch', ['build'], function () {
-    gulp.watch('*.jsx', ['build']);
+    gulp.watch(['.app/*.jsx', '!app/dist/bundle.js'], ['build']);
 });
 
-gulp.task('default', ['watch', 'serve']);
+gulp.task('default', ['build', 'watch', 'serve']);
