@@ -12,6 +12,7 @@
     "browser-sync": "^2.14.3",
     "material-ui": "^0.15.4",
     "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "react-tap-event-plugin": "^1.0.0"
   },
   "devDependencies": {
@@ -20,11 +21,13 @@
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
     "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
     "eslint-plugin-react": "^6.2.0",
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.2.4",
     "gulp-webserver": "^0.9.1",
-    "react-dom": "^15.3.1",
     "vinyl-source-stream": "^1.1.0"
   }
 }

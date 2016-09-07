@@ -4,7 +4,7 @@
         "commonjs": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": "airbnb",
     "installedESLint": true,
     "parserOptions": {
         "ecmaFeatures": {
@@ -14,11 +14,12 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "eslint-plugin-react"
     ],
     "rules": {
         "linebreak-style": [
-            "error",
+            "warn",
             "windows"
         ],
         "quotes": [
@@ -28,6 +29,10 @@
         "semi": [
             "warn",
             "always"
-        ]
+        ],
+        "no-unused-vars": 1,
+        "react/jsx-boolean-value": 0,
+        "comma-dangle": 0,
+        "react/prefer-stateless-function": 0
     }
 }
