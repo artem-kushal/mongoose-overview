@@ -1,3 +1,5 @@
-/bower_components
-/node_modules
-.eslintrc.json
+client/bower_components
+client/node_modules
+server/node_modules
+client/.vscode
+server/.vscode

@@ -1,0 +1,7 @@
+{
+	"appUri": "localhost",
+	"appPort": "1337",
+	"mongoose": {
+		"uri": "mongodb://localhost:27017/mongooseOverview"
+	}
+}

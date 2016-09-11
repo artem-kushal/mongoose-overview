@@ -1,0 +1,30 @@
+{
+  "name": "mongoose",
+  "version": "1.0.0",
+  "description": "mongoose overview",
+  "main": "main.js",
+  "scripts": {
+    "start": "node app/main.js"
+  },
+  "author": "artem_kushal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "browser-sync": "^2.15.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "gulp-exec": "^2.1.2",
+    "http-server": "^0.6.1",
+    "mongodb": "^2.0.48",
+    "mongoose": "^4.2.9",
+    "nconf": "^0.8.2",
+    "winston": "^2.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb-base": "^7.0.1",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.4"
+  }
+}
